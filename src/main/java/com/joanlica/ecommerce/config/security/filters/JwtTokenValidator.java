@@ -36,9 +36,9 @@ public class JwtTokenValidator extends OncePerRequestFilter {
     private final AuthenticationEntryPoint authEntryPoint;
 
     @Override
-    protected void doFilterInternal(@NonNull HttpServletRequest request,
-                                    @NonNull HttpServletResponse response,
-                                    @NonNull FilterChain filterChain) throws ServletException, IOException {
+    protected void doFilterInternal(HttpServletRequest request,
+                                    HttpServletResponse response,
+                                    FilterChain filterChain) throws ServletException, IOException {
         // If authentication is already present, do not re-validate.
         var existing = SecurityContextHolder.getContext().getAuthentication();
         if (existing == null || existing instanceof AnonymousAuthenticationToken) {

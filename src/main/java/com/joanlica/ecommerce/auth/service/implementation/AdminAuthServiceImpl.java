@@ -2,6 +2,7 @@ package com.joanlica.ecommerce.auth.service.implementation;
 
 import com.joanlica.ecommerce.auth.dto.admin.UpdateUserRolesDTO;
 import com.joanlica.ecommerce.auth.dto.admin.UserRolesResponseDTO;
+import com.joanlica.ecommerce.auth.model.Role;
 import com.joanlica.ecommerce.auth.repository.UserAuthRepository;
 import com.joanlica.ecommerce.auth.service.AdminAuthService;
 import com.joanlica.ecommerce.auth.service.RoleService;
@@ -35,7 +36,7 @@ public class AdminAuthServiceImpl implements AdminAuthService {
         return new UserRolesResponseDTO(userAuth.getId(),
                 userAuth.getEmail(),
                 newRoles.stream()
-                        .map(role -> role.getRoleName())
+                        .map(Role::getRoleName)
                         .collect(Collectors.toSet()));
     }
 }
