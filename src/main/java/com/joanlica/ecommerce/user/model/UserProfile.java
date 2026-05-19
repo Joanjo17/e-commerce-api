@@ -2,11 +2,7 @@ package com.joanlica.ecommerce.user.model;
 
 import com.joanlica.ecommerce.auth.model.UserAuth;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 
 @Getter

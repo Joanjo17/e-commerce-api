@@ -2,12 +2,7 @@ package com.joanlica.ecommerce.common.handler;
 
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
-import com.joanlica.ecommerce.common.exception.BrandNotFoundException;
-import com.joanlica.ecommerce.common.exception.CategoryNotFoundException;
-import com.joanlica.ecommerce.common.exception.ProductNotFoundException;
-import com.joanlica.ecommerce.common.exception.ProfileNotFoundException;
-import com.joanlica.ecommerce.common.exception.RoleNotFoundException;
-import com.joanlica.ecommerce.common.exception.UserAlreadyExistsException;
+import com.joanlica.ecommerce.common.exception.*;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
