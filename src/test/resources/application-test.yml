@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:ecommerce_test;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+    show-sql: false
+  cache:
+    type: simple
+  flyway:
+    enabled: false
+
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+
+app:
+  admin:
+    username: admin@example.com
+    password: Admin123
+  cors:
+    origins: http://localhost:*
+  security:
+    jwt:
+      generator: ecommerce-test
+      secret-key: test-secret-key-test-secret-key-test-secret-key
+      ttl-seconds: 900
+      refresh-ttl-seconds: 3600
+  cookies:
+    secure: false
+    same-site: Lax
